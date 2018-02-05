@@ -29,3 +29,5 @@ momento dell'avvio della routine.
 dall'apposito menu, il documento verrà salvato con la corrispondente configurazione di default; qualora l'utente
 inserisca una configurazione custom, il documento sarà visibile a tutti e soli i ruoli stabiliti dall'utente
 in fase di creazione del record.
+
+Inserimento nuovo testp 5 febbraio 2018
