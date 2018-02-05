@@ -1,0 +1,31 @@
+PROCEDURA DI RILASCIO BPA-DOCUMENT-PORTLET
+
+1 Creare nuova pagina nell'alberatura STRUMENTI -> Estratti Circolari (sotto a Circolari e Comunicati).
+Nella pagina creata, inserire la portlet Estratti Circolari, seguendo il percorso INGRANAGGIO -> Aggiungi.
+La portlet permette di visualizzare tutti i documenti di tipo Estratto Circolare presenti in DB.
+
+2 Dal percorso INGRANAGGIO -> Admin -> Content è possibile raggiungere il menu di Gestione Circolari dal quale
+è possibile, a patto di averne i permessi, creare, modificare o eliminare un documento (Circolare, Estratto
+Circolare o Comunicato), nonchè intervenire sui permessi di visibilità dei documenti.
+
+3 Se l'utente ha ruolo di Amministratore vedrà abilitato il pulsante "Configura visibilità default" che rimanda
+ad una pagina dalla quale è possibile configurare i permessi di visibilità di default per ogni tipologia di documento.
+Una volta configurati i permessi di visibilità per ogni tipo di documento sarà possibile salvare la configurazione.
+NB: in caso non vengano scelti ruoli di visibilità di default per una o più tipologie di documento, il sistema
+avviserà ad ogni accesso alla pagina Gestione Circolari circa la necessità di configurare la visibilità di
+default.
+
+4 Una volta definita la configurazione di default, si potrà procedere con l'abilitazione della funzionalità
+per configurare i permessi dello storico (documenti già presenti in DB); questa funzionalità si attiva andando
+a modificare la property "default-permission-button-visibility", portando il suo valore a "true" nel file
+portal-bpa-properties e riavviando il tomcat. Allo stesso modo la funzionalità può essere disabilitata configurando
+a "false" il valore della corrispondente property e riavviando il server.
+NB: questa funzionalità è attiva solo nel caso in cui l'utente abbia permessi di Amministratore.
+La routine è fatta per intervenire su tutti i documenti presenti in DB; pertanto, se in futuro verrà
+eseguita di nuovo, verranno modificati tutti i permessi di default per tutti i documenti presenti nel DB al
+momento dell'avvio della routine.
+
+5 Durante la procedura di aggiunta di un documento, se i permessi di visibilità non vengono configurati
+dall'apposito menu, il documento verrà salvato con la corrispondente configurazione di default; qualora l'utente
+inserisca una configurazione custom, il documento sarà visibile a tutti e soli i ruoli stabiliti dall'utente
+in fase di creazione del record.
