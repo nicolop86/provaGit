@@ -1,5 +1,8 @@
 <!-- Line added to test git branching -->
 <!-- Line added for second commit on testBranch -->
+
+<!-- Line added on master after testAle branching -->
+
 <!--
 <!DOCTYPE service-builder PUBLIC
 	"-//Liferay//DTD Service Builder 6.2.0//EN"
